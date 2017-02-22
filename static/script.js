@@ -13094,63 +13094,7 @@ var Content = exports.Content = function (_React$Component) {
 
     _createClass(Content, [{
         key: 'componentDidMount',
-        value: function componentDidMount() {
-            /*window.fbAsyncInit = function() {
-                //When we get a socket call with the type 'all messages', set our messages to that object
-               Socket.on('logged in', (data) => {
-                   console.log('all messages recieved, checking if user is logged in');
-                   console.log("Checking google");
-                   var auth = gapi.auth2.getAuthInstance();
-                   let user=auth.currentUser.get();
-                   
-                   if(user.isSignedIn()){
-                       this.setState({
-                           'messages': data['messages']
-                       });
-                       console.log("User is signed in, messages: "+data['messages']);
-                   } else {
-                       console.log("Checking facebook");
-                       var fbLogin = false;
-                       FB.getLoginStatus(function(response) {
-                           if (response.status == 'connected'){
-                               console.log("Connected to fb");
-                               this.setState({
-                                   'messages': data['messages']
-                               });
-                               console.log("User is signed in");
-                           }
-                       });
-                   }
-               });
-               
-                //When we get a socket call with the type 'all messages', set our messages to that object
-               Socket.on('all messages', (data) => {
-                   console.log('all messages recieved, checking if user is logged in');
-                   console.log("Checking google");
-                   var auth = gapi.auth2.getAuthInstance();
-                   let user=auth.currentUser.get();
-                   
-                   if(user.isSignedIn()){
-                       this.setState({
-                           'messages': data['messages']
-                       });
-                       console.log("User is signed in, messages: "+data['messages']);
-                   } else {
-                       console.log("Checking facebook");
-                       var fbLogin = false;
-                       FB.getLoginStatus(function(response) {
-                           if (response.status == 'connected'){
-                               console.log("Connected to fb");
-                               this.setState({
-                                   'messages': data['messages']
-                               });
-                               console.log("User is signed in");
-                           }
-                       });
-                   }
-               });
-            }.bind(this);*/
-        }
+        value: function componentDidMount() {}
     }, {
         key: 'handleMessageSubmit',
         value: function handleMessageSubmit(message) {

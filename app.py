@@ -20,7 +20,7 @@ messages = []
 users = []
 
 #API Keys/Secrets
-google_api_key = os.getenv("GOOGLE_API_KEY")
+google_api_key = os.getenv("AIzaSyD-YmKEKVxAzimqtF76IZY8t8UCsAlZDp8")
 #apisecret = os.getenv("IMAGES_API_SECRET")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://mwolff:michaelw@localhost/postgres'
