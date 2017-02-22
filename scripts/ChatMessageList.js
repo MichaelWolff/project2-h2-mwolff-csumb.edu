@@ -7,7 +7,7 @@ extends React.Component {
      constructor(props){
         super(props);
         this.state = {
-            'IsLoggedIn':true,
+            'IsLoggedIn':false,
             'messages':[]
         }
     }
@@ -48,7 +48,7 @@ extends React.Component {
             console.log("Checking google");
                 var auth = gapi.auth2.getAuthInstance();
                 let user=auth.currentUser.get();
-                var loggedIn = true;
+                var loggedIn = false;
                 if(user.isSignedIn()){
                     this.setState({
                         'IsLoggedIn': true
@@ -56,7 +56,7 @@ extends React.Component {
                     console.log("User is signed in");
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     FB.getLoginStatus(function(response) {
                         if (response.status == 'connected'){
                             console.log("Connected to fb");
@@ -66,7 +66,7 @@ extends React.Component {
                     });
                     if(!fbLogin){
                         this.setState({
-                            'IsLoggedIn': true
+                            'IsLoggedIn': false
                         });
                         console.log("User is logged out");   
                     }
@@ -91,9 +91,9 @@ extends React.Component {
                     console.log("User is signed in, messages: "+data['messages']);
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     var messages = []
-                    var isMessages = true;
+                    var isMessages = false;
                     FB.getLoginStatus(function(response) {
                         if (response.status == 'connected'){
                             console.log("Connected to fb");

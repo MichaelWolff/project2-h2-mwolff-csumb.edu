@@ -29893,7 +29893,7 @@ var UserList = exports.UserList = function (_React$Component) {
 
         _this.state = {
             'usernames': [],
-            'IsLoggedIn': false
+            'IsLoggedIn': true
         };
         return _this;
     }
@@ -30532,7 +30532,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (ChatMessageList.__proto__ || Object.getPrototypeOf(ChatMessageList)).call(this, props));
 
         _this.state = {
-            'IsLoggedIn': true,
+            'IsLoggedIn': false,
             'messages': []
         };
         return _this;
@@ -30579,7 +30579,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                 console.log("Checking google");
                 var auth = gapi.auth2.getAuthInstance();
                 var user = auth.currentUser.get();
-                var loggedIn = true;
+                var loggedIn = false;
                 if (user.isSignedIn()) {
                     _this2.setState({
                         'IsLoggedIn': true
@@ -30587,7 +30587,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     console.log("User is signed in");
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     FB.getLoginStatus(function (response) {
                         if (response.status == 'connected') {
                             console.log("Connected to fb");
@@ -30597,7 +30597,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     });
                     if (!fbLogin) {
                         _this2.setState({
-                            'IsLoggedIn': true
+                            'IsLoggedIn': false
                         });
                         console.log("User is logged out");
                     }
@@ -30622,9 +30622,9 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     console.log("User is signed in, messages: " + data['messages']);
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     var messages = [];
-                    var isMessages = true;
+                    var isMessages = false;
                     FB.getLoginStatus(function (response) {
                         if (response.status == 'connected') {
                             console.log("Connected to fb");

@@ -24,7 +24,7 @@ extends React.Component {
         super(props);
         this.state = {
             'usernames':[],
-            'IsLoggedIn':false,
+            'IsLoggedIn':true,
         }
     }
     
