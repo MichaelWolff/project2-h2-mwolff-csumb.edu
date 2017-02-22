@@ -14,6 +14,7 @@ export class Content extends React.Component {
         this.handleMessageSubmit = this.handleMessageSubmit.bind(this);
     }
     
+
     
     handleMessageSubmit(message){
         console.log("Client Submitting New Message: "+message.text);

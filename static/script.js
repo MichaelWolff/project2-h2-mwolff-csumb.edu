@@ -29893,7 +29893,7 @@ var UserList = exports.UserList = function (_React$Component) {
 
         _this.state = {
             'usernames': [],
-            'IsLoggedIn': true
+            'IsLoggedIn': false
         };
         return _this;
     }
