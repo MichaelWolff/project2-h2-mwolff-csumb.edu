@@ -6,10 +6,29 @@
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     </head>
     <body>
+        <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '265055400595856',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    </script>
         <div id="nav">
             <div id="facebookButton" class="inline" style="float:right;margin:13px;box-shadow: 5px 5px 5px grey;"></div>
             <div id="googleButton" class="inline" style="float:right;margin:13px;"></div>
-            Chattle - A Stranger Way To Chat
+            Welcome to Bat-Chat
         </div>
         <div id="chatBG">
             <div id="page-wrap">

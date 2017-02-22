@@ -8462,11 +8462,13 @@ var FacebookLoginButton = exports.FacebookLoginButton = function (_React$Compone
       var _this2 = this;
 
       // facebook signin  button render
+
       window.fbAsyncInit = function () {
         FB.init({
-          appId: '1781874442131477',
-          xfbml: true, // parse social plugins on this page
-          version: 'v2.1' // use version 2.1
+          appId: '265055400595856',
+          cookie: true,
+          xfbml: true,
+          version: 'v2.8'
         });
 
         // login callback implementation goes inside the function() { ... } block
