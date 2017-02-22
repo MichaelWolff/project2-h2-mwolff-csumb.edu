@@ -10,3 +10,5 @@ batman things
 ###Known Issues
 
 1. Just about everything
+2. For some reason when I "import models" and "models.db.create_all()" I am given an error
+3. Facebook login is working however googles is not.
