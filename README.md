@@ -12,3 +12,5 @@ batman things
 1. Just about everything
 2. For some reason when I "import models" and "models.db.create_all()" I am given an error
 3. Facebook login is working however googles is not.
+4. I can't seem to retrieve the user pictures properly
+5. Honestly this is kinda a mess right now

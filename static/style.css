@@ -1,19 +1,17 @@
 body{
-    background: url('background.png') no-repeat;
-    background-size: 125% 110%
+    background: url('background.png');
+    background-size: 10% 10%;
+    background-repeat:repeat-y;
+    background-repeat:repeat;
 }
 #page-wrap {
     height: 90%;
     width: 65%;
     margin: 50px 5px; 
     padding: 5px;
-    -moz-box-shadow: 0 0 20px black; 
-    -webkit-box-shadow: 0 0 20px black;
     background:  white;
     opacity: 1.0;
-    box-shadow: 0 0 20px black;
     overflow: auto;
-    border-radius: 8px;
     display:inline-block;
 }
 .profilePicture{
@@ -44,12 +42,9 @@ body{
     font-family: Tahoma, Geneva, sans-serif;
     font-weight: bold;
     text-align: center;
-    text-shadow: 3px 2px 3px #333333;
     background-color: #FFFFFF;
-    border-radius: 8px;
+    
     position: absolute; 
-    -moz-box-shadow: 0 0 20px black; 
-    -webkit-box-shadow: 0 0 20px black; 
     top: 0; 
     left: 0;
 }
@@ -79,17 +74,4 @@ ul {
 }
 h4 {
     text-align:center;
-}
-#userlist{
-    height: 90%;
-    width: 20%;
-    margin: 50px 5px; 
-    padding: 5px; 
-    border-radius: 8px;
-    background: white; 
-    -moz-box-shadow: 0 0 20px black; 
-    -webkit-box-shadow: 0 0 20px black; 
-    box-shadow: 0 0 20px black;
-    overflow: auto;
-    display:inline-block;
 }
