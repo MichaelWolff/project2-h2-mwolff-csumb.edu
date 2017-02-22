@@ -2,10 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { Content } from './Content';
+import { UserList } from './UserList';
+import { FacebookLoginButton } from './FacebookLoginButton';
+import { GoogleLoginButton } from './GoogleLoginButton';
 import { Socket } from './Socket';
 
-ReactDOM.render(<Content />, document.getElementById('content'));
-
-Socket.on('connect', function(){
-    console.log('Connecting to the server!');
-})
+ReactDOM.render( <FacebookLoginButton />,  document.getElementById('facebookButton') );
+ReactDOM.render( <GoogleLoginButton />,  document.getElementById('googleButton') );
+ReactDOM.render( <Content />,  document.getElementById('content') );
+ReactDOM.render( <UserList />,  document.getElementById('userlist') );

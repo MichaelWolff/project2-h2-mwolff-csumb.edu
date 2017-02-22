@@ -1,40 +1,99 @@
 import * as React from 'react';
-import { MyFavoriteAnimalList } from './MyFavoriteAnimalList';
+import {ChatMessageList} from './ChatMessageList';
+import {ChatBox} from './ChatBox';
+import {FacebookLoginButton} from './FacebookLoginButton';
+import {GoogleLoginButton} from './GoogleLoginButton';
 import { Socket } from './Socket';
-import { Contacts } from './Contacts'
 
 export class Content extends React.Component {
-      constructor() {
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            word: '',
-            new: '',
-        };
+            'messages':[]
+        }
+        this.handleMessageSubmit = this.handleMessageSubmit.bind(this);
     }
-
-    increment() {
-        this.setState({
-            word: this.state.word + this.state.new,
-            new: '',
-        })
+    
+    //When the component is mounted, add the Socketio listener
+    componentDidMount(){
+         /*window.fbAsyncInit = function() {
+             //When we get a socket call with the type 'all messages', set our messages to that object
+            Socket.on('logged in', (data) => {
+                console.log('all messages recieved, checking if user is logged in');
+                console.log("Checking google");
+                var auth = gapi.auth2.getAuthInstance();
+                let user=auth.currentUser.get();
+                
+                if(user.isSignedIn()){
+                    this.setState({
+                        'messages': data['messages']
+                    });
+                    console.log("User is signed in, messages: "+data['messages']);
+                } else {
+                    console.log("Checking facebook");
+                    var fbLogin = false;
+                    FB.getLoginStatus(function(response) {
+                        if (response.status == 'connected'){
+                            console.log("Connected to fb");
+                            this.setState({
+                                'messages': data['messages']
+                            });
+                            console.log("User is signed in");
+                        }
+                    });
+                }
+            });
+            
+             //When we get a socket call with the type 'all messages', set our messages to that object
+            Socket.on('all messages', (data) => {
+                console.log('all messages recieved, checking if user is logged in');
+                console.log("Checking google");
+                var auth = gapi.auth2.getAuthInstance();
+                let user=auth.currentUser.get();
+                
+                if(user.isSignedIn()){
+                    this.setState({
+                        'messages': data['messages']
+                    });
+                    console.log("User is signed in, messages: "+data['messages']);
+                } else {
+                    console.log("Checking facebook");
+                    var fbLogin = false;
+                    FB.getLoginStatus(function(response) {
+                        if (response.status == 'connected'){
+                            console.log("Connected to fb");
+                            this.setState({
+                                'messages': data['messages']
+                            });
+                            console.log("User is signed in");
+                        }
+                    });
+                }
+            });
+         }.bind(this);*/
     }
-
-    handleChange(value) {
-        this.setState({
-            new: value
-        });
+    
+    handleMessageSubmit(message){
+        console.log("Client Submitting New Message: "+message.text);
+        var auth = gapi.auth2.getAuthInstance();
+        let user=auth.currentUser.get();
+        if(user.isSignedIn()){
+            Socket.emit('new message', {'facebook_user_token':'','google_user_token':user.getAuthResponse().access_token,'message':{'text': message.text}});
+        } else {
+            FB.getLoginStatus((response)=>{
+                if(response.status=='connected'){
+                    Socket.emit('new message', {'facebook_user_token':response.authResponse.accessToken,'google_user_token':'','message':{'text': message.text}});
+                }
+            });   
+        }
     }
-
+    
     render() {
         return (
             <div>
-                <h1>- The message is: { this.state.word } </h1>
-                <input type="text" value={this.state.new} onChange={(e) =>this.handleChange(e.target.value)} /><br></br>
-                <input type="submit" value="Add Word" onClick={() => this.increment()} />
-                <input type="text" value={this.state.new+this.state.new} />
+                <ChatMessageList/>
+                <ChatBox submitfnc={this.handleMessageSubmit}/>
             </div>
-            
         );
     }
-    
 }
