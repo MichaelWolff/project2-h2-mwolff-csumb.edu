@@ -13624,7 +13624,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                 console.log("Checking google");
                 var auth = gapi.auth2.getAuthInstance();
                 var user = auth.currentUser.get();
-                var loggedIn = true;
+                var loggedIn = false;
                 if (user.isSignedIn()) {
                     _this2.setState({
                         'IsLoggedIn': true
@@ -13632,7 +13632,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     console.log("User is signed in");
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     FB.getLoginStatus(function (response) {
                         if (response.status == 'connected') {
                             console.log("Connected to fb");
@@ -13642,7 +13642,7 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     });
                     if (!fbLogin) {
                         _this2.setState({
-                            'IsLoggedIn': true
+                            'IsLoggedIn': false
                         });
                         console.log("User is logged out");
                     }
@@ -13667,9 +13667,9 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     console.log("User is signed in, messages: " + data['messages']);
                 } else {
                     console.log("Checking facebook");
-                    var fbLogin = true;
+                    var fbLogin = false;
                     var messages = [];
-                    var isMessages = true;
+                    var isMessages = false;
                     FB.getLoginStatus(function (response) {
                         if (response.status == 'connected') {
                             console.log("Connected to fb");
@@ -13710,9 +13710,9 @@ var ChatMessageList = exports.ChatMessageList = function (_React$Component) {
                     'div',
                     null,
                     React.createElement(
-                        'ul',
+                        'p',
                         null,
-                        listItems
+                        'Not Logged in'
                     )
                 );
             }
