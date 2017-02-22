@@ -6,7 +6,7 @@ class Contacts extends React.Component {
   }
   render() {
     return (
-      <div>Muahahahahha</div>
+      <div>Muahahahahh</div>
     );
   }
 }

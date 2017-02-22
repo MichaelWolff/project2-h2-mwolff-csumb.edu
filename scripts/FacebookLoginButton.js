@@ -13,13 +13,12 @@ extends React.Component {
     
     componentDidMount(){
       // facebook signin  button render
-      
         window.fbAsyncInit = function() {
           FB.init({
-                  appId      : '265055400595856',
-                  cookie     : true,
-                  xfbml      : true,
-                  version    : 'v2.8'
+                appId      : '265055400595856',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v2.8'
           });
     
           // login callback implementation goes inside the function() { ... } block
