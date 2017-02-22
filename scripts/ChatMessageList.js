@@ -7,7 +7,7 @@ extends React.Component {
      constructor(props){
         super(props);
         this.state = {
-            'IsLoggedIn':false,
+            'IsLoggedIn':true,
             'messages':[]
         }
     }
