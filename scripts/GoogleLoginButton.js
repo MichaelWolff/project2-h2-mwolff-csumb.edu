@@ -58,30 +58,6 @@ extends React.Component {
                     }
                 }
         });
-        /*Socket.on('disconnect',function(){
-              console.log('Disconnecting from the server!');
-              var auth = gapi.auth2.getAuthInstance();
-              let user=auth.currentUser.get();
-              if(user.isSignedIn()){
-                  auth.signOut().then(function () {
-                      console.log('User signed out.');
-                      Socket.emit('user disconnected',{'service':'google'});
-                    });
-              }
-          });*/
-          
-          //Check user credentials (Use OAuth?)
-          /*Socket.on('connect',function(){
-              console.log('Connecting to the server with Google!');
-              var auth = gapi.auth2.getAuthInstance();
-              let user=auth.currentUser.get();
-              if(!user.isSignedIn()){
-                  auth.signIn().then(function () {
-                      console.log('User signed in with Google.');
-                      Socket.emit('user connected', {'facebook_user_token':'','google_user_token':user.getAuthResponse().access_token,'username':user.name});
-                    });
-              }
-          })*/
     }
     
     onSignIn(){
@@ -140,4 +116,5 @@ extends React.Component {
                 </div>);
     }
     };
+    
 }

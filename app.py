@@ -30,6 +30,10 @@ db = flask_sqlalchemy.SQLAlchemy(app)
 @app.route('/')
 def index():
     return flask.render_template('index.html')
+    
+@app.route('/google42b1fd8856a57b09.html')
+def index2():
+    return '/google42b1fd8856a57b09.html'
 
 #On socketio connect... (When a client connects...)
 #TODO: Authenticate before showing messages
