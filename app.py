@@ -9,7 +9,6 @@ import requests
 import flask_sqlalchemy
 
 app = flask.Flask(__name__)
-
 import models
 
 #Get the flask_socketio socket
