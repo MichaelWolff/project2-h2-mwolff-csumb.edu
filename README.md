@@ -17,3 +17,4 @@ batman things
 6. 
 
 ###Changes that have been made
+I managed to break something with the authentication, I had everything working and then the whole hting came crumblin down
