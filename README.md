@@ -14,3 +14,6 @@ batman things
 3. Facebook login is working however googles is not.
 4. I can't seem to retrieve the user pictures properly
 5. Honestly this is kinda a mess right now
+6. 
+
+###Changes that have been made
