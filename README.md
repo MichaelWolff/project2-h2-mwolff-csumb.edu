@@ -18,4 +18,4 @@ batman things
 
 ###Changes that have been made
 I managed to break something with the authentication, I had everything working and then the whole hting came crumblin down
-Working on adding the heroku page with a database(Not updating messages properly)
+Working on adding the heroku page with a database(Not updating messages properly still)
