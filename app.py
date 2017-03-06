@@ -6,7 +6,6 @@ import flask
 import flask_socketio
 import json
 import requests
-import flask_sqlalchemy
 
 app = flask.Flask(__name__)
 import models
@@ -19,20 +18,13 @@ messages = []
 users = []
 
 #API Keys/Secrets
-google_api_key = os.getenv("AIzaSyCE-OuR0X4mw0wKy5-C9rSuHVJK9S8r_u0")
+google_api_key = os.getenv("GOOGLE_API_KEY")
 #apisecret = os.getenv("IMAGES_API_SECRET")
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://mwolff:michaelw@localhost/postgres'
-db = flask_sqlalchemy.SQLAlchemy(app)
 
 #index endpoint
 @app.route('/')
 def index():
     return flask.render_template('index.html')
-    
-@app.route('/google42b1fd8856a57b09.html')
-def index2():
-    return '/google42b1fd8856a57b09.html'
 
 #On socketio connect... (When a client connects...)
 #TODO: Authenticate before showing messages
