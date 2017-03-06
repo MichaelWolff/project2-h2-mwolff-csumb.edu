@@ -161,7 +161,7 @@ def parseWithAlfred(message):
         print "Checking ForCommands: "+message[2:]
         if message[2:]=="help":
             print "Found help command"
-            text = "Yes, Master Bruce !!help - A list of commands you can enter !!say <something> - Make me say something !!about - Description about this page !!Batsy - I will say something batsy !!Joker - I will tell a joke"
+            text = "!!say <something> - I'll something !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes"
     if message[0:2]==">>":
         print "Alfred read that a user logged in"
         text = "Welcome "+message[2:]+"! Type !!help for a list of commands!"
@@ -171,7 +171,7 @@ def parseWithAlfred(message):
     
     if(len(text)>120):
         print "Too many characters in the string"
-        text = "Too man characters, try and keep your messages small"
+        text = "Too many characters, try and keep your messages small, Master Bruce"
     
     if(text!=""):
         message={'text':text,'username':'Alfred','picture':'','link':''}
