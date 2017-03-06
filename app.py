@@ -171,6 +171,9 @@ def parseWithAlfred(message):
         if message[2:]=="help":
             print "Found help command"
             text = """!!say <something> - I'll say something || !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes"""
+        if message[2:]!="help" and message[2:]!="about" and message[2:]!="Batsy" and message[2:]!="Joker":
+            text = "Unrecognized command"
+            print "Unrecognized Command"
     if message[0:2]==">>":
         print "Alfred read that a user logged in"
         text = "Welcome "+message[2:]+"! Type !!help for a list of commands!"
