@@ -14,7 +14,7 @@ batman things
 3. Facebook login is working however googles is not.
 4. I can't seem to retrieve the user pictures properly
 5. Honestly this is kinda a mess right now
-6. 
+6. I just tested it out on Microsoft Edge and everything ran MUCH better than it did in chrome, I wonder how many of my problems stemmed from testing in chrome
 
 ###Changes that have been made
 I managed to break something with the authentication, I had everything working and then the whole hting came crumblin down
