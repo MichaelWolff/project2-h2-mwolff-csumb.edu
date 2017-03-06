@@ -21,3 +21,4 @@ I managed to break something with the authentication, I had everything working a
 Working on adding the heroku page with a database(Not updating messages properly still 2)
 For Some reason the database works just fine when hosted on cloud9 but not on Heroku
 had to reinstall socket io so that I could see buttons again webpack was failing
+Got postgres working again
