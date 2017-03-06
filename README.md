@@ -23,3 +23,4 @@ For Some reason the database works just fine when hosted on cloud9 but not on He
 had to reinstall socket io so that I could see buttons again webpack was failing
 Got postgres working again
 sudo service postgresql start
+Messing with the database
