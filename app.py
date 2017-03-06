@@ -161,7 +161,7 @@ def parseWithAlfred(message):
         print "Checking ForCommands: "+message[2:]
         if message[2:]=="help":
             print "Found help command"
-            text = "Yes, Master Bruce?"
+            text = "Yes, Master Bruce? \n !!help - A list of commands you can enter \n !!say <something> - Make me say something \n !!about - Description about this page \n !!Batsy - I will say something batsy \n !!Joker - I will tell a joke"
         else:
             print "Command not recognized"
             text = "I'm sorry Master Bruce but I do not recognize your command"
