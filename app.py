@@ -160,11 +160,14 @@ def parseWithAlfred(message):
     if message[0:2]=="!!":
         print "Checking ForCommands: "+message[2:]
         if message[2:]=="about":
-            print "This is a batman themed chat app built for CST 438 Project 2, this is the fifth attempt"
+            print "Running about"
+            text = "This is a batman themed chat app built for CST 438 Project 2, this is the fifth attempt"
         if message[2:]=="Batsy":
-            print "NahNahNah Bataman!!"
+            print "Running Batsy"
+            text = "NahNahNah Bataman!!"
         if message[2:]=="Joker":
-            print "How many software engineers does it take to change a lightbult? -- None, that's a hardware problem"
+            print "Running Joker"
+            text = "How many software engineers does it take to change a lightbult? -- None, that's a hardware problem"
         if message[2:]=="help":
             print "Found help command"
             text = """!!say <something> - I'll say something || !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes"""
