@@ -159,9 +159,15 @@ def parseWithAlfred(message):
     text = ""
     if message[0:2]=="!!":
         print "Checking ForCommands: "+message[2:]
+        if message[2:]=="about":
+            print "This is a batman themed chat app built for CST 438 Project 2, this is the fifth attempt"
+        if message[2:]=="Batsy":
+            print "NahNahNah Bataman!!"
+        if message[2:]=="Joker":
+            print "How many software engineers does it take to change a lightbult? -- None, that's a hardware problem"
         if message[2:]=="help":
             print "Found help command"
-            text = "%s||\n%s||\n%s" % ("!!say <something> - I'll say something","!!about - Page Description","!!Batsy - ...bat stuff")
+            text = """!!say <something> - I'll say something || !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes"""
     if message[0:2]==">>":
         print "Alfred read that a user logged in"
         text = "Welcome "+message[2:]+"! Type !!help for a list of commands!"
