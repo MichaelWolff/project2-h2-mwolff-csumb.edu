@@ -156,40 +156,7 @@ def messageRecieved(data):
 def testTesting(testText):
     return testText
     
-def parseMessage(message):
-    print "Parsing Message: "+message
-    print "Checking For Markers: "+message[0:2]
-    text = ""
-    if message[0:2]=="!!":
-        print "Checking ForCommands: "+message[2:]
-        if message[2:]=="about":
-            print "Running about"
-            text = "This is a batman themed chat app built for CST 438 Project 2, this is the fifth attempt"
-        if message[2:]=="Batsy":
-            print "Running Batsy"
-            text = "NahNahNah Bataman!!"
-        if message[2:]=="Joker":
-            print "Running Joker"
-            text = "How many software engineers does it take to change a lightbult? -- None, that's a hardware problem"
-        if message[2:]=="help":
-            print "Found help command"
-            text = """!!say <something> - I'll say something || !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes"""
-        if message[2:]!="help" and message[2:]!="about" and message[2:]!="Batsy" and message[2:]!="Joker":
-            text = "Unrecognized command"
-            print "Unrecognized Command"
-    if message[0:2]==">>":
-        print "Alfred read that a user logged in"
-        text = "Welcome "+message[2:]+"! Type !!help for a list of commands!"
-    if message[0:2]=="<<":
-        print "Alfred read that a user logged out"
-        text = "Everyone say goodbye to "+message[2:]+"!"
-    
-    if(len(text)>120):
-        print "Too many characters in the string"
-        text = "Too many characters, try and keep your messages small, Master Bruce"
-    
-    if(text!=""):
-        return text
+
 
 def parseWithAlfred(message):
     print "Parsing Message: "+message
