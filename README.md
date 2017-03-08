@@ -1,10 +1,11 @@
 # Chat room by Michael Wolff
 
-This is currently a poorly done chat room that allows users to login with FacebookLoginButton
+This is currently a chat room that allows users to login with FacebookLoginButton
 
 ##Batman theme
 
-The theme of this application is batman, the bot will respond with batmanish things as Alfred
+The theme of this application is batman, the bot will respond with batmanish things as Alfred. The background
+is also a popular image of Batman slapping Robin after something is said.
 
 ###Known Issues
 -For Some Reason it was only working properly on Microsoft Edge-
@@ -69,3 +70,5 @@ Messing with the database# project2-h1-mwolff-csumb.edu-Redo-
 
 
 # project2-h2-mwolff-csumb.edu
+Notes to me:
+1. I briefly broke the page, be sure after building it to use 'PGUSER=mwolff heroku pg:push postgres DATABASE_URL'
