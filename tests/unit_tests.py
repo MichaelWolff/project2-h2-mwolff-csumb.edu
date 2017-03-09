@@ -2,6 +2,12 @@ import unittest
 import sys
 sys.path.append('../')
 import app
+import Translate
+
+class testTranslate(unittest.TestCase):
+    def testTranslate(self):
+        result = Translate.translate_text('de', 'good day')
+        self.assertEquals(result, 'guten tag')
 
 class testparseWithAlfred(unittest.TestCase):
     def testTestingtest(self):
@@ -23,7 +29,7 @@ class testparseWithAlfred(unittest.TestCase):
     def testParseHelp(self):
         result = app.parseMessage('!!help')
         self.assertEquals(result, "!!say <something> - I'll say something || !!about - Page Description !!Batsy - ...bat stuff !!Joker - I got jokes")
-    
+
     #def testParseMessage(self):
      #   result = app.parseMessage('>>')
       #  self.assertEquals(result, 'This is a batman themed chat app built for CST 438 Project 2, this is the fifth attempt')
