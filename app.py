@@ -6,7 +6,6 @@ import flask
 import flask_socketio
 import json
 import requests
-import Translate
 
 app = flask.Flask(__name__)
 import models
