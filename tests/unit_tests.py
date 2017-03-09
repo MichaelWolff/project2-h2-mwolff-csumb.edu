@@ -2,12 +2,7 @@ import unittest
 import sys
 sys.path.append('../')
 import app
-import Translate
 
-class testTranslate(unittest.TestCase):
-    def testTranslate(self):
-        result = Translate.translate_text('de', 'good day')
-        self.assertEquals(result, 'guten tag')
 
 class testparseWithAlfred(unittest.TestCase):
     def testTestingtest(self):
